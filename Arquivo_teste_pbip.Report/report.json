@@ -1,0 +1,141 @@
+{
+  "config": "{\"version\":\"5.43\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.43\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"261047dc88ec36fa8e4c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":33.37748344370861,\"z\":1000,\"width\":1279.4701986754967,\"height\":327.4172185430464}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fato_dados.Trilha\",\"active\":true}],\"Y\":[{\"queryRef\":\"fato_dados..contagem\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trilha\"},\"Name\":\"fato_dados.Trilha\",\"NativeReferenceName\":\"Trilha\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem\"},\"Name\":\"fato_dados..contagem\",\"NativeReferenceName\":\".contagem\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico errado'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 327.42,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 33.38,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d9f77b6cfac11cc3a23a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":387.81456953642385,\"z\":0,\"width\":1279.4701986754967,\"height\":332.18543046357615}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_trilha.Trilha\",\"active\":true}],\"Y\":[{\"queryRef\":\"fato_dados..contagem\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_trilha\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Trilha\"},\"Name\":\"dim_trilha.Trilha\",\"NativeReferenceName\":\"Trilha\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem\"},\"Name\":\"fato_dados..contagem\",\"NativeReferenceName\":\".contagem\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico correto'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter88ed3a59322b95c71edb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_vp\"}},\"Property\":\"VP\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 332.19,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 387.81,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection3099bf5fef8ff9ac7153",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a2a105ed07d610f7c7f9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":303.57615894039736,\"z\":1000,\"width\":1279.4701986754967,\"height\":286.0927152317881}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fato_dados.Trilha\",\"active\":true}],\"Y\":[{\"queryRef\":\"fato_dados..contagem_vp\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp\"},\"Name\":\"fato_dados..contagem_vp\",\"NativeReferenceName\":\".contagem_vp\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trilha\"},\"Name\":\"fato_dados.Trilha\",\"NativeReferenceName\":\"Trilha\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico errado distinct vp'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter88ed3a59322b95c71edb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_vp\"}},\"Property\":\"VP\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 286.09,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 303.58,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"d87e5cc92b1907d64130\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.4701986754967,\"height\":286.0927152317881}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_trilha.Trilha\",\"active\":true}],\"Y\":[{\"queryRef\":\"fato_dados..contagem_vp\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_trilha\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Trilha\"},\"Name\":\"dim_trilha.Trilha\",\"NativeReferenceName\":\"Trilha\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp\"},\"Name\":\"fato_dados..contagem_vp\",\"NativeReferenceName\":\".contagem_vp\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico correto distinct vp'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter88ed3a59322b95c71edb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_vp\"}},\"Property\":\"VP\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 286.09,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 3",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection88d668f509d62b109b7a",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"4ee04c191e85415e41ca\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.4701986754967,\"height\":286.0927152317881}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_trilha.Trilha\",\"active\":true}],\"Y\":[{\"queryRef\":\"fato_dados..contagem_vp_2\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_trilha\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Trilha\"},\"Name\":\"dim_trilha.Trilha\",\"NativeReferenceName\":\"Trilha\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp_2\"},\"Name\":\"fato_dados..contagem_vp_2\",\"NativeReferenceName\":\".contagem_vp_2\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp_2\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico correto sumx vp'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter88ed3a59322b95c71edb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_vp\"}},\"Property\":\"VP\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 286.09,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"b23369a031136781176b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":319.4701986754967,\"z\":1000,\"width\":1279.4701986754967,\"height\":286.0927152317881}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Y\":[{\"queryRef\":\"fato_dados..contagem_vp_2\"}],\"Category\":[{\"queryRef\":\"fato_dados.Trilha\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp_2\"},\"Name\":\"fato_dados..contagem_vp_2\",\"NativeReferenceName\":\".contagem_vp_2\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trilha\"},\"Name\":\"fato_dados.Trilha\",\"NativeReferenceName\":\"Trilha\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".contagem_vp_2\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico errado sumx vp'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter88ed3a59322b95c71edb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_vp\"}},\"Property\":\"VP\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 286.09,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 319.47,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Página 4",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectiona7cb576a468e4eea82e5",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"d0e75a3ef7a9ea0b78ea\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":286.0927152317881,\"z\":1000,\"width\":1279.4701986754967,\"height\":286.0927152317881}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"fato_dados.Trilha\",\"active\":true}],\"Y\":[{\"queryRef\":\"fato_dados..medida_vp_3\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".medida_vp_3\"},\"Name\":\"fato_dados..medida_vp_3\",\"NativeReferenceName\":\".medida_vp_3\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Trilha\"},\"Name\":\"fato_dados.Trilha\",\"NativeReferenceName\":\"Trilha\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".medida_vp_3\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico errado count rows vp'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter88ed3a59322b95c71edb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_vp\"}},\"Property\":\"VP\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 286.09,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 286.09,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f102a141fb789eefedbf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1279.4701986754967,\"height\":286.0927152317881}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"dim_trilha.Trilha\",\"active\":true}],\"Y\":[{\"queryRef\":\"fato_dados..medida_vp_3\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_trilha\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fato_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Trilha\"},\"Name\":\"dim_trilha.Trilha\",\"NativeReferenceName\":\"Trilha\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".medida_vp_3\"},\"Name\":\"fato_dados..medida_vp_3\",\"NativeReferenceName\":\".medida_vp_3\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\".medida_vp_3\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'gráfico correto count rows vp'\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter88ed3a59322b95c71edb\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_vp\"}},\"Property\":\"VP\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+          "height": 286.09,
+          "width": 1279.47,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+table dim_vp
+	lineageTag: ae4fa817-15d1-4bdf-8612-365a4b3a4ef3
+
+	column VP
+		dataType: string
+		lineageTag: 42cca199-5cdd-45a7-b608-6b6304d78d39
+		summarizeBy: none
+		sourceColumn: VP
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_vp-76d02724-c883-4387-9671-e1e95a1b5ea1 = m
+		mode: import
+		source =
+				let
+				    Fonte = fato_dados,
+				    #"Colunas Removidas" = Table.RemoveColumns(Fonte,{"Nome Completo", "Lider Imediato", "Diretor", "Trilha", "Status", "% Trilha", "status_de_conclusao"}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Colunas Removidas")
+				in
+				    #"Duplicatas Removidas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

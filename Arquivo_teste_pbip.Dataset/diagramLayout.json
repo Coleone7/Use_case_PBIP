@@ -1,0 +1,82 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 118,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 761.25804711747116,
+            "y": 225.86777222166728
+          },
+          "nodeIndex": "fato_dados",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 290.76859407422205,
+            "y": 364.73462477276638
+          },
+          "nodeIndex": "dim_status",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 787.32782506151875,
+            "y": 0
+          },
+          "nodeIndex": "dim_trilha",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1148.366392715815,
+            "y": 366.40771938181581
+          },
+          "nodeIndex": "dim_vp",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1499.4,
+            "y": 0
+          },
+          "nodeIndex": "dim_status_de_conclusao",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 59.76948312374136,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

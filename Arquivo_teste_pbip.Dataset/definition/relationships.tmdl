@@ -1,0 +1,16 @@
+relationship d0490569-ece0-44f0-9a4f-42602cd6192b
+	fromColumn: fato_dados.VP
+	toColumn: dim_vp.VP
+
+relationship 9f6f2a55-8c82-41df-a13b-b780bc05fbe3
+	fromColumn: fato_dados.Trilha
+	toColumn: dim_trilha.Trilha
+
+relationship 8c27ed47-0c1c-42ca-8eaa-67ed3b5d83b8
+	fromColumn: fato_dados.Status
+	toColumn: dim_status.Status
+
+relationship aad0b396-2d21-42b0-a7a0-7494d7d240f8
+	fromColumn: fato_dados.status_de_conclusao
+	toColumn: dim_status_de_conclusao.status_de_conclusao
+

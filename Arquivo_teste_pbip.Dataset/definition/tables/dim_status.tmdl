@@ -1,0 +1,24 @@
+table dim_status
+	lineageTag: 61cde86b-0202-423e-a886-e2dd86949697
+
+	column Status
+		dataType: string
+		lineageTag: b7fa11c4-78ad-4951-a5bc-9a326edfe681
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_status-e6113c3b-3724-436b-af57-437aeba974dc = m
+		mode: import
+		source =
+				let
+				    Fonte = fato_dados,
+				    #"Colunas Removidas" = Table.RemoveColumns(Fonte,{"Nome Completo", "Lider Imediato", "Diretor", "VP", "Trilha", "% Trilha", "status_de_conclusao"}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Colunas Removidas"),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Duplicatas Removidas", each ([Status] <> null))
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_ResultType = Table
+

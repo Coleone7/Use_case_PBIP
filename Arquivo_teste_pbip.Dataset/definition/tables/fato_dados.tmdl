@@ -1,0 +1,100 @@
+table fato_dados
+	lineageTag: 3e9ab5bb-879a-4f0b-acc4-7b914f312b43
+
+	measure '.contagem' = COUNTROWS(fato_dados)
+		formatString: 0
+		lineageTag: b7984034-1c8f-4545-9264-e137114802ff
+
+	measure '.contagem_vp' = DISTINCTCOUNT(fato_dados[VP])
+		formatString: 0
+		lineageTag: 4f9cb2f0-ec39-464f-83cf-ed049316c264
+
+	measure '.contagem_vp_2' = SUMX(VALUES(fato_dados[VP]),1)
+		formatString: 0
+		lineageTag: 5815c992-b507-4db3-8b7c-aa0c17dfb0f2
+
+	measure '.medida_vp_3' = COUNTROWS(DISTINCT(fato_dados[VP]))
+		formatString: 0
+		lineageTag: 239bf054-ef3c-462c-b6f7-002182023202
+
+	column 'Nome Completo'
+		dataType: string
+		lineageTag: d7cfc09d-0e13-4ffe-9807-b71cf3f6b328
+		summarizeBy: none
+		sourceColumn: Nome Completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lider Imediato'
+		dataType: string
+		lineageTag: 79a81c12-3d6c-4cef-b438-c8398dbbe2b7
+		summarizeBy: none
+		sourceColumn: Lider Imediato
+
+		annotation SummarizationSetBy = Automatic
+
+	column Diretor
+		dataType: string
+		lineageTag: 97152e84-55d3-4930-bb66-a9a64c1604b7
+		summarizeBy: none
+		sourceColumn: Diretor
+
+		annotation SummarizationSetBy = Automatic
+
+	column VP
+		dataType: string
+		lineageTag: 5809df4c-1285-49d8-92fa-305214720641
+		summarizeBy: none
+		sourceColumn: VP
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trilha
+		dataType: string
+		lineageTag: 65521793-b5dc-4fce-9d01-98e2221ccb71
+		summarizeBy: none
+		sourceColumn: Trilha
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: b4d042a3-290e-41c5-8bc3-99b88e357beb
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% Trilha'
+		dataType: double
+		lineageTag: c8bbbe8a-366f-4563-9706-0bfcc9e876e8
+		summarizeBy: sum
+		sourceColumn: % Trilha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column status_de_conclusao
+		dataType: string
+		lineageTag: b4a8e488-cf97-4dcd-be83-dfcb161a2b77
+		summarizeBy: none
+		sourceColumn: status_de_conclusao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_dados-452a5e66-af9d-4e9d-98d4-91cf68af4673 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(Web.Contents("https://rdcombr-my.sharepoint.com/personal/mcoleone_rd_com_br/Documents/PowerBI/testes_pbip/data_letramento1.xlsx"), null, true),
+				    Export_Sheet = Fonte{[Item="Export",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Export_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome Completo", type text}, {"Lider Imediato", type text}, {"Diretor", type text}, {"VP", type text}, {"Trilha", type text}, {"Status", type text}, {"% Trilha", type number}}),
+				    #"Linhas Inferiores Removidas" = Table.RemoveLastN(#"Tipo Alterado",2),
+				    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Linhas Inferiores Removidas", "status_de_conclusao", each if [#"% Trilha"] = null then "Não inscrito" else if [#"% Trilha"] >= 100 then "Concluido" else if [#"% Trilha"] = 0 then "Não iniciado - Inscrito" else "Em Andamento")
+				in
+				    #"Coluna Condicional Adicionada"
+
+	annotation PBI_ResultType = Table
+

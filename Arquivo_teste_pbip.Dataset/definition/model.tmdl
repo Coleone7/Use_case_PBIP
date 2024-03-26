@@ -1,0 +1,23 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["fato_dados","dim_vp","dim_trilha","dim_status","dim_status_de_conclusao"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.126.1261.0 (24.02)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table fato_dados
+ref table DateTableTemplate_4caf89e4-b1dc-413e-a4fd-8e7b689a1364
+ref table dim_vp
+ref table dim_trilha
+ref table dim_status
+ref table dim_status_de_conclusao
+

@@ -1,0 +1,26 @@
+table dim_trilha
+	lineageTag: 4ec15f28-f061-43ce-9f21-cf0bd127e26c
+
+	column Trilha
+		dataType: string
+		lineageTag: 98402c4a-066f-4e95-a1e4-87083fcd1426
+		summarizeBy: none
+		sourceColumn: Trilha
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_trilha-c4b49c9c-b187-4f9d-920d-baa0e27640b8 = m
+		mode: import
+		source =
+				let
+				    Fonte = fato_dados,
+				    #"Colunas Removidas" = Table.RemoveColumns(Fonte,{"Nome Completo", "Lider Imediato", "Diretor", "VP", "Status", "% Trilha", "status_de_conclusao"}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Colunas Removidas"),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Duplicatas Removidas", each ([Trilha] <> null))
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+
