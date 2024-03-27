@@ -17,6 +17,10 @@ table fato_dados
 		formatString: 0
 		lineageTag: 239bf054-ef3c-462c-b6f7-002182023202
 
+	measure '.contagem_trilha' = SUMX(VALUES(fato_dados[Trilha]),1)
+		formatString: 0
+		lineageTag: d050eb77-54bd-4294-9a6a-a0d865925231
+
 	column 'Nome Completo'
 		dataType: string
 		lineageTag: d7cfc09d-0e13-4ffe-9807-b71cf3f6b328
